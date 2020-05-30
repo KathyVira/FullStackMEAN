@@ -1,6 +1,6 @@
 <div class="page-title">
   <h4>
-    Обзор за вчера
+    סקירה עבור אתמול
     ({{yesterday | date:'dd.MM.yyyy'}})
     <i class="material-icons black-text pointer" (click)="openInfo()">
       info_outline
@@ -12,8 +12,8 @@
   <div class="col s12 l6">
     <div class="card light-blue lighten-2 white-text">
       <div class="card-content">
-        <span class="card-title">Выручка:</span>
-        <h3>{{data.gain.yesterday}} руб.</h3>
+        <span class="card-title">הכנסות:</span>
+        <h3>{{data.gain.yesterday}} ש"ח.</h3>
         <h3 class="m0 mb1" [ngClass]="{
             'green-text text-darken-2': data.gain.isHigher,
             'red-text': !data.gain.isHigher
@@ -24,12 +24,13 @@
           {{data.gain.precent}}%
         </h3>
         <p>
-          Выручка вашего бизнеса вчера на
+          הכנסות העסק שלך אתמול ב
           {{data.gain.precent}}%
-          {{data.gain.isHigher ? 'выше' : 'ниже'}}
-          среднего:
+          {{data.gain.isHigher ? 'גבוה' : 'נמוך'}}
+          <br>
+          ממוצע:
           {{data.gain.compare}}
-          руб. в день
+          ש"ח ביום
         </p>
       </div>
     </div>
@@ -38,8 +39,8 @@
   <div class="col s12 l6">
     <div class="card orange lighten-2 white-text">
       <div class="card-content">
-        <span class="card-title">Заказы:</span>
-        <h3>{{data.orders.yesterday}} зак.</h3>
+        <span class="card-title">הזמנות:</span>
+        <h3>{{data.orders.yesterday}} הזמנות</h3>
         <h3 class="m0 mb1" [ngClass]="{
             'green-text text-darken-2': data.orders.isHigher,
             'red-text': !data.orders.isHigher
@@ -50,11 +51,12 @@
           {{data.orders.precent}}%
         </h3>
         <p>
-          Число заказов вчера на {{data.orders.precent}}%
-          {{data.orders.isHigher ? 'выше' : 'ниже'}}
-          среднего значения:
+          מספר ההזמנות אתמול ב {{data.orders.precent}}%
+          {{data.orders.isHigher ? 'גבוה' : 'נמוך'}}
+          <br>
+          ערך ממוצע:
           {{data.orders.compare}}
-          зак. в день
+          הזמנות ביום
         </p>
       </div>
     </div>
@@ -68,8 +70,8 @@
 
 <div class="tap-target" data-target="menu" #tapTarget>
   <div class="tap-target-content">
-    <h5>Зачем нужна эта страница?</h5>
-    <p>Страница “Обзор” покажет динамику продаж за предыдущий день. Сравнение со средним значениями поможет вам понять,
-      как идут дела у Вашего бизнеса.</p>
+    <h5>??מדוע דף זה נחוץ</h5>
+    <p>הדף "סקירה כללית" יציג את הדינמיקה של המכירות ביום הקודם. השוואת ממוצעים תעזור לך להבין
+      איך העסק שלך מתנהל?</p>
   </div>
 </div>

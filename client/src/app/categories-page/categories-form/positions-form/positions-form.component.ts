@@ -77,14 +77,14 @@ export class PositionsFormComponent
   onDeletePosition(event: Event, position: Position) {
     event.stopPropagation();
     const decision = window.confirm(
-      `are you shure you whont to delete "${position.name}" ?`
+      `אתה בטוח שאתה רוצה למחוק "${position.name}" ?`
     );
     if (decision) {
       this.positionsService.delete(position).subscribe(
         (response) => {
           const idx = this.positions.findIndex((p) => p._id == p._id);
           this.positions.splice(idx, 1);
-          MaterialService.toast('Deleted');
+          MaterialService.toast('נמחק');
         },
         (error) => MaterialService.toast(error.error.message)
       );
@@ -114,7 +114,7 @@ export class PositionsFormComponent
         (position) => {
           const idx = this.positions.findIndex((p) => p._id === position._id);
           this.positions[idx] = position;
-          MaterialService.toast('Position updated');
+          MaterialService.toast('הפריט עודכן');
         },
         (error) => MaterialService.toast(error.error.message),
         completed
@@ -122,7 +122,7 @@ export class PositionsFormComponent
     } else {
       this.positionsService.create(newPosition).subscribe(
         (position) => {
-          MaterialService.toast('new Position created');
+          MaterialService.toast('נוצר פריט חדש');
           this.positions.push(position);
         },
         (error) => MaterialService.toast(error.error.message),

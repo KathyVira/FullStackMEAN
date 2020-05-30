@@ -33,7 +33,7 @@ module.exports.remove = async function (req, res) {
       category: req.params.id
     })
     res.status(200).json({
-      message: 'Категория удалена.'
+      message: 'הקטגוריה נמחקה'
     })
   } catch (e) {
     errorHandler(res, e)

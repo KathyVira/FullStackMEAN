@@ -33,7 +33,7 @@ module.exports.remove = async function (req, res) {
       _id: req.params.id
     })
     res.status(200).json({
-      message: 'Позиция была удалена.'
+      message: 'פריט נמחק'
     })
   } catch (e) {
     errorHandler(res, e)

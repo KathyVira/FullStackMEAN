@@ -1,20 +1,20 @@
 <div class="page-title">
-  <h4>Аналитика</h4>
+  <h4>ניתוח כלכלי</h4>
 </div>
 
 
 <div [style.display]="pending ? 'none': 'block'">
   <div class="average-price">
-    <p>Средний чек <strong>{{average}} ש"ח</strong></p>
+    <p> ממוצע לחשבון <strong>{{average}} ש"ח</strong></p>
   </div>
 
   <div class="analytics-block pb3">
-    <h5>Выручка</h5>
+    <h5>הכנסות</h5>
     <canvas #gain></canvas>
   </div>
 
   <div class="analytics-block">
-    <h5>Заказы</h5>
+    <h5>הזמנות</h5>
     <canvas #order></canvas>
   </div>
 </div>

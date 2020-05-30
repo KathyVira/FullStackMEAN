@@ -1,30 +1,20 @@
 <div class="page-title">
-  <h4>Категории</h4>
-  <button
-    class="waves-effect waves-light btn grey darken-1"
-    routerLink="/categories/new"
-  >
-    Добавить категорию
+  <h4>קטגוריות</h4>
+  <button class="waves-effect waves-light btn grey darken-1" routerLink="/categories/new">
+    הוסף קטגוריה
   </button>
 </div>
 
-<div
-  class="row"
-  *ngIf="categories$ | async as categories; else loader"
->
+<div class="row" *ngIf="categories$ | async as categories; else loader">
   <div class="col s12">
     <div class="collection" *ngIf="categories.length !== 0; else empty">
-      <a
-        *ngFor="let category of categories"
-        [routerLink]="['/categories', category._id]"
-        class="collection-item"
-      >
+      <a *ngFor="let category of categories" [routerLink]="['/categories', category._id]" class="collection-item">
         {{category.name}}
       </a>
     </div>
     <ng-template #empty>
       <div class="center">
-        У вас нет ни одной категории
+        אין לך קטגוריות
       </div>
     </ng-template>
   </div>
@@ -33,4 +23,3 @@
 <ng-template #loader>
   <app-loader></app-loader>
 </ng-template>
-

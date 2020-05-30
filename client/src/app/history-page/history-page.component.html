@@ -1,5 +1,5 @@
 <div class="page-title">
-  <h4>История заказов</h4>
+  <h4>רשימת הזמנות</h4>
   <button (click)="isFilterVisible = !isFilterVisible" class="btn btn-small" [ngClass]="{
       'active': isFilterVisible,
       'red':isFiltered()
@@ -15,7 +15,7 @@
     <app-history-list [orders]="orders"></app-history-list>
     <div class="center mb2" *ngIf="!noMoreOrders">
       <button class="btn waves-effect grey darken-1 btn-small" (click)="loadMore()" *ngIf="!loading; else loader">
-        Загрузить еще
+        טען עוד
       </button>
       <ng-template #loader>
         <app-loader></app-loader>
@@ -23,7 +23,7 @@
     </div>
   </div>
   <ng-template #empty>
-    <div class="center">Заказов пока нет.</div>
+    <div class="center">אין עדיין הזמנות.</div>
   </ng-template>
 </div>
 

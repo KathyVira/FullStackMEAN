@@ -14,7 +14,6 @@ import { MaterialService } from 'src/app/shared/classes/material.service';
   styleUrls: ['./order-positions.component.css'],
 })
 export class OrderPositionsComponent implements OnInit {
-
   positions$: Observable<Position[]>;
 
   constructor(
@@ -40,7 +39,7 @@ export class OrderPositionsComponent implements OnInit {
   addToOrder(position: Position) {
     console.log(position);
 
-    MaterialService.toast(`Добавлено x${position.quantity}`)
+    MaterialService.toast(`הוסף x ${position.quantity}`);
     this.order.add(position);
   }
 }

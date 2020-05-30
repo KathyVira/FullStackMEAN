@@ -3,9 +3,9 @@
   <table class="highlight" *ngIf="positions.length !== 0; else empty">
     <thead>
       <tr>
-        <th>Название</th>
-        <th>Стоимость</th>
-        <th>Количество</th>
+        <th>כותרת</th>
+        <th>עלות</th>
+        <th>כמות</th>
         <th></th>
       </tr>
     </thead>
@@ -21,13 +21,13 @@
         </td>
         <td>
           <button [disabled]="!position.quantity" class="btn waves-effect wavers-light btn-small"
-            (click)="addToOrder(position)">Добавить</button>
+            (click)="addToOrder(position)">להוסיף</button>
         </td>
       </tr>
     </tbody>
   </table>
   <ng-template #empty>
-    <div class="center">in this category is empty</div>
+    <div class="center">קטגוריה זו ריקה</div>
   </ng-template>
 </div>
 

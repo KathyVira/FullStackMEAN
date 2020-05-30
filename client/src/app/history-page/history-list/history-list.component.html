@@ -2,9 +2,9 @@
   <thead>
     <tr>
       <th>№</th>
-      <th>Дата</th>
-      <th>Время</th>
-      <th>Сумма</th>
+      <th>תאריך</th>
+      <th>שעה</th>
+      <th>כמות</th>
       <th></th>
     </tr>
   </thead>
@@ -28,13 +28,13 @@
 
 <div id="order-list" class="modal modal-fixed-footer" #modal>
   <div class="modal-content" *ngIf="selectedOrder">
-    <h4 class="mb1">Заказ №{{selectedOrder.order}}</h4>
+    <h4 class="mb1">הזמנה №{{selectedOrder.order}}</h4>
     <table class="highlight">
       <thead>
         <tr>
-          <th>Название</th>
-          <th>Количество</th>
-          <th>Цена</th>
+          <th>כותרת</th>
+          <th>כמות</th>
+          <th>מחיר</th>
         </tr>
       </thead>
 
@@ -47,10 +47,10 @@
       </tbody>
     </table>
     <div class="order-summary">
-      <p>Общая стоимость <strong>{{computePrice(selectedOrder)}} ש"ח</strong></p>
+      <p>עלות כוללת <strong>{{computePrice(selectedOrder)}} ש"ח</strong></p>
     </div>
   </div>
   <div class="modal-footer">
-    <button class="modal-action waves-effect waves-black btn-flat" (click)="closeModal()">Закрыть</button>
+    <button class="modal-action waves-effect waves-black btn-flat" (click)="closeModal()">סגור</button>
   </div>
 </div>

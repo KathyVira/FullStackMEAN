@@ -67,7 +67,7 @@ export class CategoriesFormComponent implements OnInit {
 
   deleteCategory() {
     const decision = window.confirm(
-      `Are you shure you whant to delete category ${this.category.name} ?`
+      `האם אתה בטוח שברצונך למחוק קטגוריה ${this.category.name} ?`
     );
 
     if (decision) {
@@ -107,7 +107,7 @@ export class CategoriesFormComponent implements OnInit {
     obs$.subscribe(
       (category) => {
         this.category = category;
-        MaterialService.toast('seved');
+        MaterialService.toast('נשמר');
         this.form.enable();
       },
       (error) => {

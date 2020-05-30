@@ -1,8 +1,8 @@
 <div class="page-title">
   <h4>
-    <a routerLink="/categories">Категории</a>
+    <a routerLink="/categories">קטגוריות</a>
     <i class="material-icons">keyboard_arrow_right</i>
-    {{isNew ? 'Добавить' : 'Редактировать'}} категорию
+    {{isNew ? 'הוסף' : 'ערוך'}} קטגוריה
   </h4>
   <span>
     <button class="btn btn-small red" (click)="deleteCategory()" *ngIf="!isNew">
@@ -16,10 +16,10 @@
     <div class="input-field">
       <input formControlName="name" id="name" type="text"
         [ngClass]="{'invalid': form.get('name').invalid && form.get('name').touched}">
-      <label for="name">Название</label>
+      <label for="name">כותרת</label>
       <span class="helper-text red-text" *ngIf="form.get('name').invalid && form.get('name').touched">
         <span *ngIf="form.get('name').errors['required']">
-          Имя категории не может быть пустым.
+          שם הקטגוריה לא יכול להיות ריק
         </span>
       </span>
     </div>
@@ -29,13 +29,13 @@
 
       <button (click)=trigerCkick() type="button" class="waves-effect waves-light btn orange lighten-2 mb2">
         <i class="material-icons left">backup</i>
-        Загрузить изображение
+        העלאת תמונה
       </button>
     </div>
 
     <div>
       <button type="submit" [disabled]="form.invalid || form.disabled" class="waves-effect waves-light btn">
-        Сохранить изменения
+        שמור שינויים
       </button>
     </div>
   </form>
