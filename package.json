@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "full app MEAN",
   "main": "index.js",
+  "engines": {
+    "node": "v12.14.1",
+    "npm": "6.13.4"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
@@ -23,7 +27,8 @@
     "server": "nodemon index",
     "client-install": "npm i --prefix client",
     "client": " npm run start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\" "
+    "dev": "concurrently \"npm run server\" \"npm run client\" ",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run client-install && npm run build --prefix client"
   },
   "keywords": [
     "express",
